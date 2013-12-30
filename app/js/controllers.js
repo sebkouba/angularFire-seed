@@ -21,6 +21,10 @@ angular.module('myApp.controllers', [])
             $scope.newMessage = null;
          }
       };
+
+       $scope.deleteMessage = function(key) {
+           $scope.messages.$remove(key);
+       }
    }])
 
    .controller('LoginCtrl', ['$scope', 'loginService', '$location', function($scope, loginService, $location) {
