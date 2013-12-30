@@ -11,6 +11,6 @@ angular.module('myApp.filters', [])
 
    .filter('reverse', function() {
       return function(items) {
-         return items.slice().reverse();
+         return Array.isArray(items) && items.slice().reverse();
       };
    });
